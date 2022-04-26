@@ -41,11 +41,11 @@ class Action():
                     else:
                         self.action_list.append(0)
                 elif self.current_holding_stock == 0:
-                    if prices[i + 1] < self.buy_price:
+                    if prices[i + 1] < self.last_day_price:
                         self.buy_price = prices[i + 1]
                         self.action_list.append(1)
                         self.current_holding_stock += 1
-                    elif prices[i + 1] > self.buy_price:
+                    elif prices[i + 1] > self.last_day_price:
                         self.buy_price = prices[i + 1]
                         self.action_list.append(-1)
                         self.current_holding_stock -= 1
