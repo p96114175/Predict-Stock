@@ -1,11 +1,26 @@
-# Predict-Stock
-  1554
+# Predict-Stock P96114175
+  
+# Model & Methods
+
+一開始先分析了 Close price & Open price，後來發現兩個間數據差異不大
+
+因此訓練時挑選其中一個Close price as feature，並應用預測時間序列資料模型 LSTM 進行訓練。
+
+由於最後結果須輸出20天預測，因此在訓練時我們將train data 以20天為一份進行訓練
+
+預測結果如圖:
+
+  ![image](https://user-images.githubusercontent.com/102530486/165242516-04f4bf9a-f355-4cc3-86ad-9cb038b0f617.png)
+
 # Install
     pip install -r requirements.txt
-# Implement
+# Run the code
+
+將trader.py、training.csv、testing testing.csv、output.csv載下後(需在同資料夾內)
+
     python app.py --training training.csv --testing testing.csv --output output.csv
     
-# Action
+# Maket Strategy
   定義出以下四種變數作為後續邏輯判斷之依據
   
   ▶ buy_price  
