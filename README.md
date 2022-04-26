@@ -21,9 +21,9 @@
       else:
         action(採取行動) =  0(不採取行動)
     elif current_holding_stock(目前持有股票數) = 0:
-      If 未來預測價格 < 買進價格
+      If 未來預測價格 < 前一天價格
         action(採取行動) = 1(買進)
-      elif 未來預測價格 > 買進價格
+      elif 未來預測價格 > 前一天價格
         action(採取行動) = -1(賣出)
       else:
         action(採取行動) =  0(不採取行動)  
